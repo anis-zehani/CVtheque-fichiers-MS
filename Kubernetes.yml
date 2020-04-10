@@ -18,10 +18,12 @@ spec:
     spec:
       containers:
       - name: fichiers-container
-        image: registry.gitlab.com/gitlabodix/fichiers-ms
+        image: registry.gitlab.com/gitlabodix/cvtheque-fichiers-ms-prod
         imagePullPolicy: Always
         ports:
         - containerPort: 8005
+      imagePullSecrets:
+      - name: gitlab-secrets
 ---
 apiVersion: v1
 kind: Service
