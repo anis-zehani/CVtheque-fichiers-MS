@@ -34,11 +34,12 @@ spec:
       - name: fichiers-container
         image: registry.gitlab.com/gitlabodix/cvtheque-fichiers-ms-prod
         args: ["--spring.profiles.active=prod"]
-        imagePullPolicy: Never
+        imagePullPolicy: Always
         ports:
         - containerPort: 8005
       imagePullSecrets:
       - name: gitlab-secrets-fichiers-ms
+#################### Service ####################
 ---
 apiVersion: v1
 kind: Service
